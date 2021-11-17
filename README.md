@@ -7,25 +7,25 @@
 
 
 <br><br>
-# Raytracing Program
-## About The Class
+# 🎯 Raytracing Program
+## 🎓 About The Class
 #### CSE386 - The Foundation Of Computer Graphics 
 I took this class my junior year of college and it brought heavy focus into vectors and vector arithmetic. Mastering the skills of normalizing, morphing, and creating vectors was a dependency to do all of the fun stuff later down the road. We first learned about raytracing, this process takes every pixel and computes a color based on the “shapes” within the scene.  When comparing this algorithm to an “object-ordered” algorithm, it is much slower in computation time but it gave me a great understanding of how 3D scenes are rendered on computers. Late in the class, we learned about “object-ordered rendering” which is an algorithm that computes the color of shapes by object rather than by pixel. The class was a marathon rather than a sprint as each topic built on the other. Overall, it was a really neat class and I would recommend anyone to learn this stuff if they have the opportunity to.
 
 
 <br><br><br>
-## About The Program
+## ℹ About The Program
 This program revolves around the concept of raytracing. Raytracing is a term for a *fancy* algorithm that renders 3D images in computer graphics. The algorithm takes a viewing ray for every pixel within the window and “shoots” them into the scene and calculates a color for the corresponding pixel. If a window has a size of 200px by 100px, there will be a total of 20,000 pixels, thus 20,000 viewing rays. After all of the viewing, rays have been calculated for the window, the frame will be shown. The calculation process for a single pixel can be as complex as you want it to be! For example, if I wanted my image to be super detailed, I could add shadows, reflections, anti-aliasing, transparent objects, and so much more. On the flip side, you can also make it very simple, only showing the ambient/silhouette of the objects within the scene. The possibilities are truly endless. The process describes the flawless *elegancy* of programming.
 
 
 <br><br><br>
-## The *Fancy* Calculation Features
-### Anti-aliasing
+## 🧮 The *Fancy* Calculation Features
+### ⭕ Anti-aliasing
 This is a really neat feature that you probably experience every day but are not even aware of! This takes a nice ridged edge and will make it round with one simple calculation. There are many different intensities that you can choose to do but for the sake of our program, we decided to use a three-by-three grid. This will take a pixel and get the sum of the colors (RGB) of every pixel surrounding it by shooting extra viewing rays. Afterward, it will take the current pixel and reassign it with the average color, creating those buttery smooth images. <br><br>
-Example of a 3x3 grid:
+Example of a 3x3 pixel grid:
 | ↘ | ⬇ | ↙ 
 | :---: | :---: | :---:
-| ➡ | ⏹ | ⬅ 
+| ➡ | 🟥 | ⬅ 
 | ↗ | ⬆ | ↖ 
 
 | Before | After
@@ -34,12 +34,12 @@ Example of a 3x3 grid:
 
 
 <br><br>
-### Cones & Spotlights
+### 💡 Cones & Spotlights
 These two features go hand in hand. A cone is a smaller feature that uses the quadratic surface equation of a parabolic cylinder to create the shape’s properties. A little extra work is needed to let the program know to not keep producing the shape above the tip of the cone. A spotlight is simply a cone but, instead of a physical shape, it is light. Anything within the "light cone" will be illuminated but anything outside will show the object ambient. An index position, height, and radius of the base will be specified when creating the cone.
 
 
 <br><br>
-### Reflections
+### 🔃 Reflections
 This is my favorite feature within this program. This feature ultimately allowed us to create mirrors within our scene. Here is the recursive process of how it works:
 - Ray shoots and hits an object
 - Reflection vector is shot away from the original hit object
@@ -59,16 +59,16 @@ My program allows it to specify how many recursions to do, I personally always s
 
 
 <br><br>
-### Shadows
-The shadows really make the lights and objects in the scene feel like they have a real presense. When a ray hits an object, it will shoot out rays to every light object. If those rays intersect with another opaque object and the light intensity is large enough, it will produce a shadow for the other opaque object. This calculation also calculates multiple different lights in the scene so the shadow will be based on all the light objects. These rays that shoot out to the light object are called shadow feelers. Surface acne will also have to be taken into account, thus moving the hit 0.01 units above each surface. <br>
+### 🌇 Shadows
+The shadows make the lights and objects in the scene feel like they have a real presence. When a ray hits an object, it will shoot out rays to every light object. If those rays intersect with another opaque object and the light intensity is large enough, it will produce a shadow for the other opaque object. This calculation also calculates multiple different lights in the scene so the shadow will be based on all the light objects. These rays that shoot out to the light object are called shadow feelers. Surface acne will also have to be taken into account, thus moving the hit 0.01 units above each surface. <br>
 | Before | After
 | :---: | :---:
 | ![Before_Visual](https://github.com/ethangutknecht/RaytracingProgram/blob/main/Images/Shadows_Before.png?raw=true) |  ![After_Visual](https://github.com/ethangutknecht/RaytracingProgram/blob/main/Images/Shadows_After.png?raw=true)
 
 
 <br><br>
-### Viewports
-This feature allows you to look at multiple differnt camera angles at the same time. This will split up the window in different sections, rending the same scene from multiple different camera angles. How does it work? It calls the render frame function many times and specifies how big the size of the render should be. It will also specify where those pixels should be based on the start position. 
+### 📷 Viewports
+This feature allows you to look at multiple different camera angles at the same time. This will split up the window into different sections, rending the same scene from multiple different camera angles. How does it work? It calls the render frame function many times and specifies how big the size of the render should be. It will also specify where those pixels should be based on the start position. 
 
 Rendering Sections | Camera Positions
 | :---: | :---:
@@ -79,31 +79,51 @@ Rendering Sections | Camera Positions
 
 
 <br><br>
-### Textures
-Textures is pretty simple. Put an image on an object. For objects like a plane or a single side of a cube, it becomes pretty easy to do. The challenge comes when you have to map the object onto a 3D surface. The example used in my screenshots is maping an American flag onto a cylinder's side. This wraps the flag around the cylinder similar how you would do with a can of soup. There had to be some computations involving mapping the images size in pixel to [0, 1]. Once that mapping computation is complete, its pretty simple to find what color that pixel needs to be based on the image map, lighting, etc.
+### 🎨 Textures
+Textures are pretty simple. Put an image on an object. For objects like a plane or a single side of a cube, it becomes pretty easy to do. The challenge comes when you have to map the object onto a 3D surface. The example used in my screenshots is mapping an American flag onto a cylinder's side. This wraps the flag around the cylinder similar to how you would do with a can of soup. There had to be some computations involving mapping the size of the image in pixel to [0, 1]. Once that mapping computation is complete, it’s pretty simple to find what color that pixel needs to be based on the image map, lighting, etc.
 
 <br><br>
-### Transparency
-Transparency is one of those features that take the program from good to great. In this program, we have a set of objects that are opaque and a set of objects that are transparent. When a viewing ray hits a transparent object, it will continue to shoot past looking for more objects. There are different cases:
-- Hits anotehr opaque object
+### 🌫 Transparency
+Transparency is one of those features that take the program from good to great. In this program, we have a set of objects that are opaque and a set of transparent objects. When a viewing ray hits a transparent object, it will continue to shoot past looking for more objects. There are different cases:
+- Hits another opaque object
 - Hits the "sky" or no object
 - Hits another transparent object
 
-Based on these cases, we would combine the colors with whatever it hit and the transparent object's color. Overall, the objects behind a transparent object would look like it would have a tint varying by how transparent the object is. In the example I have below, you can see the red plane is intersecting the scene making everything "behind" the red plane having a red tint.
+Based on these cases, we would combine the colors with whatever it hit and the transparent object's color. Overall, the objects behind a transparent object would look like they would have a tint varying by how transparent the object is. In the example I have below, you can see the red plane is intersecting the scene making everything "behind" the red plane have a red tint.
 
 <br>**Example Of Transparency:**<br>
 ![Example_Of_Viewports](https://github.com/ethangutknecht/RaytracingProgram/blob/main/Images/Transparency_Example1.png?raw=true)
 
 
-<br><br><br>
-## The Final *Beautiful* Renders ## 
+<br><br><br><br>
+
+- - - -
+
+<br>
+
+<p align="center">
+  ...🥁now lets put it all together...drumroll please🥁...
+</p>
+
+<br>
+
+- - - -
+
+
+<br><br><br><br>
+
+## 🏁 The Final *Beautiful* Renders
 ![Image_1](https://github.com/ethangutknecht/RaytracingProgram/blob/main/Images/Image_1.png?raw=true)
 ![Image_2](https://github.com/ethangutknecht/RaytracingProgram/blob/main/Images/Image_2.png?raw=true)
 ![Image_3](https://github.com/ethangutknecht/RaytracingProgram/blob/main/Images/Image_3.png?raw=true)
 ![Image_4](https://github.com/ethangutknecht/RaytracingProgram/blob/main/Images/Image_4.png?raw=true)
 
 <br><br><br>
+
 - - - -
 
-*Copyright © Ethan Gutknecht 2021*
+<p align="center">
+  Copyright © Ethan Gutknecht 2021
+</p>
+
 
