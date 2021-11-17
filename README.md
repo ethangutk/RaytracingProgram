@@ -50,20 +50,53 @@ This is my favorite feature within this program. This feature ultimately allowed
 | :---: | :---: | :---:
 | ![Image_1](https://github.com/ethangutknecht/RaytracingProgram/blob/main/Images/ReflectionsDemo_1.png?raw=true) | ![Image 2](https://github.com/ethangutknecht/RaytracingProgram/blob/main/Images/ReflectionsDemo_2.png?raw=true) | ![Image_3](https://github.com/ethangutknecht/RaytracingProgram/blob/main/Images/ReflectionsDemo_3.png?raw=true)
 
-My program allows it to specify how many recursions to do, I personally always set it to three since doing more seems to diminish returns. Finally, I also had to take into consideration surface acne when coding this. So every hit is slightly moved above the surface by a very small factor of 0.01 units.
-
+My program allows it to specify how many recursions to do, I personally always set it to three since doing more seems to diminish returns. Finally, I also had to take into consideration surface acne when coding this. So every hit is slightly moved above the surface by a very small factor of 0.01 units.<br><br>
+**Example Of Surface Acne:**<br>
+![Example_Of_Surface_Acne](https://github.com/ethangutknecht/RaytracingProgram/blob/main/Images/SurfaceAcne.png?raw=true)
+<br><br>
+**Example Of Reflections:**<br>
 ![Example_Of_Reflections](https://github.com/ethangutknecht/RaytracingProgram/blob/main/Images/ReflectionsExample.png?raw=true)
 
 
 <br><br>
 ### Shadows
+The shadows really make the lights and objects in the scene feel like they have a real presense. When a ray hits an object, it will shoot out rays to every light object. If those rays intersect with another opaque object and the light intensity is large enough, it will produce a shadow for the other opaque object. This calculation also calculates multiple different lights in the scene so the shadow will be based on all the light objects. These rays that shoot out to the light object are called shadow feelers. Surface acne will also have to be taken into account, thus moving the hit 0.01 units above each surface. <br>
+| Before | After
+| :---: | :---:
+| ![Before_Visual](https://github.com/ethangutknecht/RaytracingProgram/blob/main/Images/Shadows_Before.png?raw=true) |  ![After_Visual](https://github.com/ethangutknecht/RaytracingProgram/blob/main/Images/Shadows_After.png?raw=true)
+
+
+<br><br>
 ### Viewports
+This feature allows you to look at multiple differnt camera angles at the same time. This will split up the window in different sections, rending the same scene from multiple different camera angles. How does it work? It calls the render frame function many times and specifies how big the size of the render should be. It will also specify where those pixels should be based on the start position. 
+
+Rendering Sections | Camera Positions
+| :---: | :---:
+| ![Sections](https://github.com/ethangutknecht/RaytracingProgram/blob/main/Images/ViewPorts_Example2.png?raw=true) |  ![Cam_Positions](https://github.com/ethangutknecht/RaytracingProgram/blob/main/Images/Viewports_Example3.png?raw=true)
+
+<br>**Example Of Viewports:**<br>
+![Example_Of_Viewports](https://github.com/ethangutknecht/RaytracingProgram/blob/main/Images/ViewPorts_Example1.png?raw=true)
+
+
+<br><br>
 ### Textures
+Textures is pretty simple. Put an image on an object. For objects like a plane or a single side of a cube, it becomes pretty easy to do. The challenge comes when you have to map the object onto a 3D surface. The example used in my screenshots is maping an American flag onto a cylinder's side. This wraps the flag around the cylinder similar how you would do with a can of soup. There had to be some computations involving mapping the images size in pixel to [0, 1]. Once that mapping computation is complete, its pretty simple to find what color that pixel needs to be based on the image map, lighting, etc.
+
+<br><br>
 ### Transparency
+Transparency is one of those features that take the program from good to great. In this program, we have a set of objects that are opaque and a set of objects that are transparent. When a viewing ray hits a transparent object, it will continue to shoot past looking for more objects. There are different cases:
+- Hits anotehr opaque object
+- Hits the "sky" or no object
+- Hits another transparent object
+
+Based on these cases, we would combine the colors with whatever it hit and the transparent object's color. Overall, the objects behind a transparent object would look like it would have a tint varying by how transparent the object is. In the example I have below, you can see the red plane is intersecting the scene making everything "behind" the red plane having a red tint.
+
+<br>**Example Of Transparency:**<br>
+![Example_Of_Viewports](https://github.com/ethangutknecht/RaytracingProgram/blob/main/Images/Transparency_Example1.png?raw=true)
 
 
 <br><br><br>
-## The *Beautiful* Renders ## 
+## The Final *Beautiful* Renders ## 
 ![Image_1](https://github.com/ethangutknecht/RaytracingProgram/blob/main/Images/Image_1.png?raw=true)
 ![Image_2](https://github.com/ethangutknecht/RaytracingProgram/blob/main/Images/Image_2.png?raw=true)
 ![Image_3](https://github.com/ethangutknecht/RaytracingProgram/blob/main/Images/Image_3.png?raw=true)
