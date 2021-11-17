@@ -19,7 +19,7 @@ This program revolves around the concept of raytracing. Raytracing is a term for
 
 
 <br><br><br>
-## 🧮 The *Fancy* Calculation Features
+## 🧮 The *Fancy* Features
 ### ⭕ Anti-aliasing
 This is a really neat feature that you probably experience every day but are not even aware of! This takes a nice ridged edge and will make it round with one simple calculation. There are many different intensities that you can choose to do but for the sake of our program, we decided to use a three-by-three grid. This will take a pixel and get the sum of the colors (RGB) of every pixel surrounding it by shooting extra viewing rays. Afterward, it will take the current pixel and reassign it with the average color, creating those buttery smooth images. <br><br>
 Example of a 3x3 pixel grid:
