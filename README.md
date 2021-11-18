@@ -30,7 +30,7 @@ Example of a 3x3 pixel grid:
 
 | Before | After
 | :---: | :---:
-| ![Before_Visual](https://github.com/ethangutknecht/RaytracingProgram/blob/main/Images/AA_Before.png?raw=true) |  ![After_Visual](https://github.com/ethangutknecht/RaytracingProgram/blob/main/Images/AA_After.png?raw=true)
+| <img src="https://github.com/ethangutknecht/RaytracingProgram/blob/main/Images/AA_Before.png?raw=true" width="360" height="240"> | <img src="https://github.com/ethangutknecht/RaytracingProgram/blob/main/Images/AA_After.png?raw=true" width="360" height="240"> 
 
 
 <br><br>
@@ -48,31 +48,30 @@ This is my favorite feature within this program. This feature ultimately allowed
 
 | Allowing 0 Recursions | Allowing 1 Recursion | Allowing 2 Recursions 
 | :---: | :---: | :---:
-| ![Image_1](https://github.com/ethangutknecht/RaytracingProgram/blob/main/Images/ReflectionsDemo_1.png?raw=true) | ![Image 2](https://github.com/ethangutknecht/RaytracingProgram/blob/main/Images/ReflectionsDemo_2.png?raw=true) | ![Image_3](https://github.com/ethangutknecht/RaytracingProgram/blob/main/Images/ReflectionsDemo_3.png?raw=true)
+| <img src="https://github.com/ethangutknecht/RaytracingProgram/blob/main/Images/ReflectionsDemo_1.png?raw=true" width="270" height="180"> | <img src="https://github.com/ethangutknecht/RaytracingProgram/blob/main/Images/ReflectionsDemo_2.png?raw=true" width="270" height="180"> | <img src="https://github.com/ethangutknecht/RaytracingProgram/blob/main/Images/ReflectionsDemo_3.png?raw=true" width="270" height="180">
 
-My program allows it to specify how many recursions to do, I personally always set it to three since doing more seems to diminish returns. Finally, I also had to take into consideration surface acne when coding this. So every hit is slightly moved above the surface by a very small factor of 0.01 units.<br><br>
-**Example Of Surface Acne:**<br>
-![Example_Of_Surface_Acne](https://github.com/ethangutknecht/RaytracingProgram/blob/main/Images/SurfaceAcne.png?raw=true)
-<br><br>
-**Example Of Reflections:**<br>
-![Example_Of_Reflections](https://github.com/ethangutknecht/RaytracingProgram/blob/main/Images/ReflectionsExample.png?raw=true)
+My program allows it to specify how many recursions to do, I personally always set it to three since doing more seems to diminish returns. Finally, I also had to take into consideration surface acne when coding this. So every hit is slightly moved above the surface by a very small factor of 0.01 units.<br>
 
+| Example Of Surface Acne | Example Of Reflections 
+| :---: | :---: 
+| <img src="https://github.com/ethangutknecht/RaytracingProgram/blob/main/Images/SurfaceAcne.png?raw=true" width="475" height="290"> | <img src="https://github.com/ethangutknecht/RaytracingProgram/blob/main/Images/ReflectionsExample.png?raw=true" width="475" height="290"> 
 
 <br><br>
 ### 🌇 Shadows
 The shadows make the lights and objects in the scene feel like they have a real presence. When a ray hits an object, it will shoot out rays to every light object. If those rays intersect with another opaque object and the light intensity is large enough, it will produce a shadow for the other opaque object. This calculation also calculates multiple different lights in the scene so the shadow will be based on all the light objects. These rays that shoot out to the light object are called shadow feelers. Surface acne will also have to be taken into account, thus moving the hit 0.01 units above each surface. <br>
+
 | Before | After
 | :---: | :---:
-| ![Before_Visual](https://github.com/ethangutknecht/RaytracingProgram/blob/main/Images/Shadows_Before.png?raw=true) |  ![After_Visual](https://github.com/ethangutknecht/RaytracingProgram/blob/main/Images/Shadows_After.png?raw=true)
+| <img src="https://github.com/ethangutknecht/RaytracingProgram/blob/main/Images/Shadows_Before.png?raw=true" width="470" height="280"> | <img src="https://github.com/ethangutknecht/RaytracingProgram/blob/main/Images/Shadows_After.png?raw=true" width="470" height="280">
 
 
 <br><br>
 ### 📷 Viewports
 This feature allows you to look at multiple different camera angles at the same time. This will split up the window into different sections, rending the same scene from multiple different camera angles. How does it work? It calls the render frame function many times and specifies how big the size of the render should be. It will also specify where those pixels should be based on the start position. 
 
-Rendering Sections | Camera Positions
+| Rendering Sections | Camera Positions
 | :---: | :---:
-| ![Sections](https://github.com/ethangutknecht/RaytracingProgram/blob/main/Images/ViewPorts_Example2.png?raw=true) |  ![Cam_Positions](https://github.com/ethangutknecht/RaytracingProgram/blob/main/Images/Viewports_Example3.png?raw=true)
+| <img src="https://github.com/ethangutknecht/RaytracingProgram/blob/main/Images/ViewPorts_Example2.png?raw=true" width="359" height="238"> | <img src="https://github.com/ethangutknecht/RaytracingProgram/blob/main/Images/Viewports_Example3.png?raw=true" width="359" height="238">
 
 <br>**Example Of Viewports:**<br>
 ![Example_Of_Viewports](https://github.com/ethangutknecht/RaytracingProgram/blob/main/Images/ViewPorts_Example1.png?raw=true)
