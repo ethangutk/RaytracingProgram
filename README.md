@@ -10,12 +10,12 @@
 # 🎯 Raytracing Program
 ## 🎓 About The Class
 #### CSE386 - The Foundation Of Computer Graphics 
-I took this class my junior year of college and it brought heavy focus into vectors and vector arithmetic. Mastering the skills of normalizing, morphing, and creating vectors was a dependency to do all of the fun stuff later down the road. We first learned about raytracing, this process takes every pixel and computes a color based on the “shapes” within the scene.  When comparing this algorithm to an “object-ordered” algorithm, it is much slower in computation time but it gave me a great understanding of how 3D scenes are rendered on computers. Late in the class, we learned about “object-ordered rendering” which is an algorithm that computes the color of shapes by object rather than by pixel. The class was a marathon rather than a sprint as each topic built on the other. Overall, it was a really neat class and I would recommend anyone to learn this stuff if they have the opportunity to.
+I took this class my junior year of college and it brought heavy focus into vectors and vector arithmetic. Mastering the skills of normalizing, morphing, and creating vectors was a dependency to do all of the fun stuff later down the road. We first learned about raytracing, this process takes every pixel and computes a color based on the “shapes” within the scene.  When comparing this algorithm to an “object-ordered” algorithm, it is much slower in computation time but it gave me a great understanding of how 3D scenes are rendered on computers. Late in the class, we learned about “object-ordered rendering” which is an algorithm that computes the color of shapes by object rather than by pixel. The class was a marathon rather than a sprint as each topic built on the other. Overall, it was a really neat class and I would recommend anyone to learn this stuff if they have the opportunity.
 
 
 <br><br><br>
 ## ℹ About The Program
-This program revolves around the concept of raytracing. Raytracing is a term for a *fancy* algorithm that renders 3D images in computer graphics. The algorithm takes a viewing ray for every pixel within the window and “shoots” them into the scene and calculates a color for the corresponding pixel. If a window has a size of 200px by 100px, there will be a total of 20,000 pixels, thus 20,000 viewing rays. After all of the viewing, rays have been calculated for the window, the frame will be shown. The calculation process for a single pixel can be as complex as you want it to be! For example, if I wanted my image to be super detailed, I could add shadows, reflections, anti-aliasing, transparent objects, and so much more. On the flip side, you can also make it very simple, only showing the ambient/silhouette of the objects within the scene. The possibilities are truly endless. The process describes the flawless *elegancy* of programming.
+This program revolves around the concept of raytracing. Raytracing is a term for a *fancy* algorithm that renders 3D images in computer graphics. The algorithm takes a viewing ray for every pixel within the window and “shoots” them into the scene and calculates a color for the corresponding pixel. If a window has a size of 200px by 100px, there will be a total of 20,000 pixels, thus 20,000 viewing rays. After all of the viewing, rays have been calculated for the window, the frame will be shown. The calculation process for a single pixel can be as complex as you want it to be! For example, if I wanted my image to be super detailed, I could add shadows, reflections, anti-aliasing, transparent objects, and so much more. On the flip side, you can also make it very simple, only showing the ambient/silhouette of the objects within the scene. The possibilities are truly endless. The process perfectly describes the flawless *elegancy* of programming.
 
 
 <br><br><br>
@@ -102,7 +102,7 @@ Based on these cases, we would combine the colors with whatever it hit and the t
 <br>
 
 <p align="center">
-  ...🥁now lets put it all together...drumroll please🥁...
+  ...🥁now let's put it all together...drumroll please🥁...
 </p>
 
 <br>
@@ -112,7 +112,7 @@ Based on these cases, we would combine the colors with whatever it hit and the t
 
 <br><br><br><br>
 
-## 🏁 The Final *Beautiful* Renders
+## 🏁 The *Beautiful* Renders
 ![Image_1](https://github.com/ethangutknecht/RaytracingProgram/blob/main/Images/Image_1.png?raw=true)
 ![Image_2](https://github.com/ethangutknecht/RaytracingProgram/blob/main/Images/Image_2.png?raw=true)
 ![Image_3](https://github.com/ethangutknecht/RaytracingProgram/blob/main/Images/Image_3.png?raw=true)
