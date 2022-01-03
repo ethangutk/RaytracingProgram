@@ -7,7 +7,36 @@
 
 
 <br><br>
-# 🎯 Raytracing Program
+<h1 align="center">🎯 Raytracing Program</h1><br>
+<table align="center">
+	<tr>
+		<th>
+			Directory
+		</th>
+	</tr>
+	<tr>
+		<td>
+			<a href="https://github.com/ethangutknecht/RaytracingProgram#-about-the-class">🎓 About The Class</a><br><br>
+			<a href="https://github.com/ethangutknecht/RaytracingProgram#%E2%84%B9-about-the-program">ℹ About The Program</a><br><br>
+			<a href="https://github.com/ethangutknecht/RaytracingProgram#-the-fancy-calculation-features">🧮 The Fancy Calculation Features</a>
+			<ul>
+				<li><a href="https://github.com/ethangutknecht/RaytracingProgram#-anti-aliasing">⭕ Anti-aliasing</a></li>
+        <li><a href="https://github.com/ethangutknecht/RaytracingProgram#-cones--spotlights">💡 Cones & Spotlights</a></li>
+        <li><a href="https://github.com/ethangutknecht/RaytracingProgram#-reflections">🔃 Reflections</a></li>
+        <li><a href="https://github.com/ethangutknecht/RaytracingProgram#-shadows">🌇 Shadows</a></li>
+        <li><a href="https://github.com/ethangutknecht/RaytracingProgram#-viewports">📷 Viewports</a></li>
+        <li><a href="https://github.com/ethangutknecht/RaytracingProgram#-textures">🎨 Textures</a></li>
+        <li><a href="https://github.com/ethangutknecht/RaytracingProgram#-transparency">🌫 Transparency</a></li>
+			</ul>
+      <a href="https://github.com/ethangutknecht/RaytracingProgram#-the-final-beautiful-renders">🏁 The Final Beautiful Renders</a><br><br>
+		</td>
+  	</tr>
+</table><br>
+
+
+
+
+
 ## 🎓 About The Class
 #### CSE386 - The Foundation Of Computer Graphics 
 I took this class my junior year of college, and it brought heavy focus into vectors and vector arithmetic. Mastering the skills of normalizing, morphing, and creating vectors was a dependency to do all of the fun stuff later down the road. We first learned about raytracing; this process takes every pixel and computes a color based on the “shapes” within the scene.  When comparing this algorithm to an “object-ordered” algorithm, it is much slower in computation time, but it gave me a great understanding of how 3D scenes are rendered on computers. Late in the class, we learned about “object-ordered rendering,” an algorithm that computes the color of shapes by object rather than by pixel. The course was a marathon rather than a sprint, as each topic built on the other. Overall, it was an impeccable class, and I would recommend anyone to learn this stuff if they have the opportunity.
@@ -15,7 +44,7 @@ I took this class my junior year of college, and it brought heavy focus into vec
 
 <br><br><br>
 ## ℹ About The Program
-This program revolves around the concept of raytracing. Raytracing is a term for a *fancy* algorithm that renders 3D images in computer graphics. The algorithm takes a viewing ray for every pixel within the window and “shoots” them into the scene, and calculates a color for the corresponding pixel. For example, if a window has a size of 200px by 100px, there will be a total of 20,000 pixels, thus 20,000 viewing rays. After all the viewing rays have been calculated for the window, the algorithm will show the frame. The calculation process for a single pixel can be as complex as you want it to be! For example, if I wanted my image to be super detailed, I could add shadows, reflections, anti-aliasing, transparent objects, and so much more. On the flip side, you can also make it very simple, only showing the ambient/silhouette of the things within the scene. The possibilities are truly endless. The process describes the flawless *elegancy* of programming.
+This program revolves around the concept of raytracing. Raytracing is a term for a *fancy* algorithm that renders 3D images in computer graphics. The algorithm takes a viewing ray for every pixel within the window and “shoots” them into the scene and calculates a color for the corresponding pixel. For example, if a window has a size of 200px by 100px, there will be a total of 20,000 pixels, thus 20,000 viewing rays. After all the viewing rays have been calculated for the window, the algorithm will show the frame. The calculation process for a single pixel can be as complex as you want it to be! For example, if I wanted my image to be super detailed, I could add shadows, reflections, anti-aliasing, transparent objects, and so much more. On the flip side, you can also make it very simple, only showing the ambient/silhouette of the things within the scene. The possibilities are truly endless. The process describes the flawless *elegancy* of programming.
 
 
 <br><br><br>
@@ -35,7 +64,7 @@ Example of a 3x3 grid:
 
 <br><br>
 ### 💡 Cones & Spotlights
-These two features go hand in hand. A cone is a minor feature that uses the quadratic surface equation of a parabolic cylinder to create the shape’s properties. A little extra work is needed to let the program know not to keep producing the shape above the tip of the cone. A spotlight is simply a cone but, instead of a physical form, it is light. Anything within the "light cone" will be illuminated, but anything outside will show the object ambient. An index position, height, and radius of the base will be specified when creating the cone.
+These two features go hand in hand. A cone is a minor feature that uses the quadratic surface equation of a parabolic cylinder to create the shape’s properties. A little extra work is needed to let the program know not to keep producing the shape above the tip of the cone. A spotlight is simply a cone, but it is light instead of a physical form. Anything within the "light cone" will be illuminated, but anything outside will show the object ambient. An index position, height, and radius of the base will be specified when creating the cone.
 
 
 <br><br>
@@ -50,7 +79,7 @@ This is my favorite feature within this program. This feature ultimately allowed
 | :---: | :---: | :---:
 | ![Image_1](https://github.com/ethangutknecht/RaytracingProgram/blob/main/Images/ReflectionsDemo_1.png?raw=true) | ![Image 2](https://github.com/ethangutknecht/RaytracingProgram/blob/main/Images/ReflectionsDemo_2.png?raw=true) | ![Image_3](https://github.com/ethangutknecht/RaytracingProgram/blob/main/Images/ReflectionsDemo_3.png?raw=true)
 
-My program allows it to specify how many recursions to do. I personally always set it to three since doing more seems to diminish returns. Finally, I also had to take into consideration surface acne when coding this. So every hit is slightly moved above the surface by a tiny factor of 0.01 units.<br><br>
+My program allows it to specify how many recursions to do. I always set it to three since doing more seems to diminish returns. Finally, I also had to consider surface acne when coding this. So every hit is slightly moved above the surface by a tiny factor of 0.01 units.<br><br>
 **Example Of Surface Acne:**<br>
 ![Example_Of_Surface_Acne](https://github.com/ethangutknecht/RaytracingProgram/blob/main/Images/SurfaceAcne.png?raw=true)
 <br><br>
@@ -60,7 +89,7 @@ My program allows it to specify how many recursions to do. I personally always s
 
 <br><br>
 ### 🌇 Shadows
-The shadows make the lights and objects in the scene feel like they have a real presence. When a ray hits an object, it will shoot out rays to every light object. If those rays intersect with another opaque object and the light intensity is large enough, it will produce a shadow for the other opaque object. This also calculates multiple lights in the scene so that the shadow be accurate. These rays that shoot out to the light object are called shadow feelers. Surface acne will also have to be considered, thus moving the hit 0.01 units above each surface. <br>
+The shadows make the lights and objects in the scene feel like they are real. When a ray hits an object, it will shoot rays to every light object. If those rays intersect with another opaque object and the light intensity is large enough, it will produce a shadow for the other opaque object. This also calculates multiple lights in the scene so that the shadow be accurate. These rays that shoot out to the light object are called shadow feelers. Surface acne will also be considered, thus moving the hit 0.01 units above each surface. <br>
 | Before | After
 | :---: | :---:
 | ![Before_Visual](https://github.com/ethangutknecht/RaytracingProgram/blob/main/Images/Shadows_Before.png?raw=true) |  ![After_Visual](https://github.com/ethangutknecht/RaytracingProgram/blob/main/Images/Shadows_After.png?raw=true)
@@ -68,7 +97,7 @@ The shadows make the lights and objects in the scene feel like they have a real 
 
 <br><br>
 ### 📷 Viewports
-This feature allows you to look at multiple different camera angles at the same time. This will split up the window into different sections, rending the same scene from multiple camera angles. How does it work? It calls the render frame function many times and specifies how big the size of the render should be. It will also determine where those pixels should be based on the start position. 
+This feature allows you to look at multiple different camera angles simultaneously. This will split the window into different sections, rending the same scene from multiple camera angles. How does it work? It calls the render frame function many times and specifies how big the size of the render should be. It will also determine where those pixels should be based on the start position. 
 
 Rendering Sections | Camera Positions
 | :---: | :---:
@@ -80,11 +109,11 @@ Rendering Sections | Camera Positions
 
 <br><br>
 ### 🎨 Textures
-Textures are pretty simple. Put an image on an object. For objects like a plane or a single side of a cube, it becomes pretty easy to do. The challenge comes when you have to map the object onto a 3D surface. The example used in my screenshots is mapping an American flag onto a cylinder's side. This wraps the flag around the cylinder, similar to how you would do with a can of soup. Next, there had to be some computations involving mapping the size of the image in pixel to [0, 1]. Once that mapping computation is complete, it’s pretty simple to find what color that pixel needs based on the image map, lighting, etc.
+Textures are pretty simple. Put an image on an object. For objects like a plane or a single side of a cube, it becomes pretty easy to do. The challenge comes when you map the object onto a 3D surface. The example used in my screenshots is mapping an American flag onto a cylinder's side. This wraps the flag around the cylinder, similar to how you would do with a can of soup. Next, there had to be some computations involving mapping the size of the image in pixel to [0, 1]. Once that mapping computation is complete, it’s pretty simple to find what color that pixel needs based on the image map, lighting, etc.
 
 <br><br>
 ### 🌫 Transparency
-Transparency is one of those features that take the program from good to great. In this program, we have a set of opaque objects and a set of transparent objects. When a viewing ray hits a transparent object, it will continue to shoot past, looking for more objects. There are different cases:
+Transparency is one feature that takes the program from good to great. In this program, we have a set of opaque objects and a set of transparent objects. When a viewing ray hits a transparent object, it will continue to shoot past, looking for more objects. There are different cases:
 - Hits another opaque object
 - Hits the "sky" or no object
 - Hits another transparent object
@@ -125,5 +154,3 @@ We would combine the colors with whatever it hit and the transparent object's co
 <p align="center">
   Copyright © Ethan Gutknecht 2021
 </p>
-
-
