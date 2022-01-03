@@ -1,12 +1,3 @@
-<br><br>
-
-
-| ⚠ ⚠ ⚠ ***DISCLAIMER*** ⚠ ⚠ ⚠
-| :---:
-| I AM ***UNABLE*** TO POST THE SOURCE CODE FOR THIS SPECIFIC PROJECT DUE TO THE PROFESSOR'S COPYRIGHT ON THE SKELETON THAT THE PROFESSOR ORIGINALLY GAVE
-
-
-<br><br>
 <h1 align="center">🎯 Raytracing Program</h1><br>
 <table align="center">
 	<tr>
@@ -32,10 +23,15 @@
 		</td>
   	</tr>
 </table><br>
+<br><br>
 
 
+| ⚠ ⚠ ⚠ ***DISCLAIMER*** ⚠ ⚠ ⚠
+| :---:
+| I AM ***UNABLE*** TO POST THE SOURCE CODE FOR THIS SPECIFIC PROJECT DUE TO THE PROFESSOR'S COPYRIGHT ON THE SKELETON THAT THE PROFESSOR ORIGINALLY GAVE
 
 
+<br><br>
 
 ## 🎓 About The Class
 #### CSE386 - The Foundation Of Computer Graphics 
