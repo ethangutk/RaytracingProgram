@@ -85,7 +85,7 @@ My program allows it to specify how many recursions to do. I always set it to th
 
 <br><br>
 ### 🌇 Shadows
-The shadows make the lights and objects in the scene feel like they are real. When a ray hits an object, it will shoot rays to every light object. If those rays intersect with another opaque object and the light intensity is large enough, it will produce a shadow for the other opaque object. This also calculates multiple lights in the scene so that the shadow be accurate. These rays that shoot out to the light object are called shadow feelers. Surface acne will also be considered, thus moving the hit 0.01 units above each surface. <br>
+The shadows make the lights and objects in the scene feel real. When a ray hits an object, it will shoot rays to every light object. If those rays intersect with another opaque object and the light intensity is large enough, it will produce a shadow for the other opaque object. This also calculates multiple lights in the scene so that the shadow be accurate. These rays that shoot out to the light object are called shadow feelers. Surface acne will also be considered, thus moving the hit 0.01 units above each surface. <br>
 | Before | After
 | :---: | :---:
 | ![Before_Visual](https://github.com/ethangutknecht/RaytracingProgram/blob/main/Images/Shadows_Before.png?raw=true) |  ![After_Visual](https://github.com/ethangutknecht/RaytracingProgram/blob/main/Images/Shadows_After.png?raw=true)
@@ -146,7 +146,21 @@ We would combine the colors with whatever it hit and the transparent object's co
 <br><br><br>
 
 - - - -
+<p align="center">
+	<a align="center" href="https://github.com/ethangutknecht/RaytracingProgram#-raytracing-program">⬆ Back To The Top </a>
+</p>
+
+- - - -
+
+<p align="center">
+	<a href="https://github.com/ethangutknecht">↩ Back To Ethan Gutknecht's Profile</a>
+</p>
+
+- - - -
 
 <p align="center">
   Copyright © Ethan Gutknecht 2021
 </p>
+
+
+
