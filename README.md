@@ -1,3 +1,7 @@
+<h6 >
+	<a href="https://github.com/ethangutknecht">↩ Back To Ethan Gutknecht's Profile</a>
+</h6>
+
 <h1 align="center">🎯 Raytracing Program</h1><br>
 <table align="center">
 	<tr>
@@ -146,21 +150,21 @@ We would combine the colors with whatever it hit and the transparent object's co
 <br><br><br>
 
 - - - -
-<p align="center">
+<h6 align="center">
 	<a align="center" href="https://github.com/ethangutknecht/RaytracingProgram#-raytracing-program">⬆ Back To The Top </a>
-</p>
+</h6>
 
 - - - -
 
-<p align="center">
+<h6 align="center">
 	<a href="https://github.com/ethangutknecht">↩ Back To Ethan Gutknecht's Profile</a>
-</p>
+</h6>
 
 - - - -
 
-<p align="center">
-  Copyright © Ethan Gutknecht 2021
-</p>
+<h6 align="center">
+  Copyright © Ethan Gutknecht 2022
+</h6>
 
 
 
