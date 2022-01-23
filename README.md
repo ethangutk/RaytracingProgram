@@ -44,7 +44,7 @@ I took this class my junior year of college, and it brought heavy focus into vec
 
 <br><br><br>
 ## ℹ About The Program
-This program revolves around the concept of raytracing. Raytracing is a term for a *fancy* algorithm that renders 3D images in computer graphics. The algorithm takes a viewing ray for every pixel within the window and “shoots” them into the scene and calculates a color for the corresponding pixel. For example, if a window has a size of 200px by 100px, there will be a total of 20,000 pixels, thus 20,000 viewing rays. After all the viewing rays have been calculated for the window, the algorithm will show the frame. The calculation process for a single pixel can be as complex as you want it to be! For example, if I wanted my image to be super detailed, I could add shadows, reflections, anti-aliasing, transparent objects, and so much more. On the flip side, you can also make it very simple, only showing the ambient/silhouette of the things within the scene. The possibilities are truly endless. The process describes the flawless *elegancy* of programming.
+This program revolves around the concept of raytracing. Raytracing is a term for a *fancy* algorithm that renders 3D images in computer graphics. The algorithm takes a viewing ray for every pixel within the window, “shoots” them into the scene, and calculates a color for the corresponding pixel. For example, if a window has a size of 200px by 100px, there will be a total of 20,000 pixels, thus 20,000 viewing rays. After all the viewing rays have been calculated for the window, the algorithm will show the frame. The calculation process for a single pixel can be as complex as you want it to be! For example, if I wanted my image to be super detailed, I could add shadows, reflections, anti-aliasing, transparent objects, and so much more. On the flip side, you can also make it very simple, only showing the ambient/silhouette of the things within the scene. The possibilities are truly endless. The process describes the flawless *elegancy* of programming.
 
 
 <br><br><br>
@@ -165,6 +165,8 @@ We would combine the colors with whatever it hit and the transparent object's co
 <h6 align="center">
   Copyright © Ethan Gutknecht 2022
 </h6>
+
+
 
 
 
