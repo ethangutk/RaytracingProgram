@@ -16,12 +16,12 @@
 			<a href="#-the-fancy-calculation-features">🧮 The Fancy Calculation Features</a>
 			<ul>
 				<li><a href="#-anti-aliasing">⭕ Anti-aliasing</a></li>
-        <li><a href="https://github.com/ethangutknecht/RaytracingProgram#-cones--spotlights">💡 Cones & Spotlights</a></li>
-        <li><a href="https://github.com/ethangutknecht/RaytracingProgram#-reflections">🔃 Reflections</a></li>
-        <li><a href="https://github.com/ethangutknecht/RaytracingProgram#-shadows">🌇 Shadows</a></li>
-        <li><a href="https://github.com/ethangutknecht/RaytracingProgram#-viewports">📷 Viewports</a></li>
-        <li><a href="https://github.com/ethangutknecht/RaytracingProgram#-textures">🎨 Textures</a></li>
-        <li><a href="https://github.com/ethangutknecht/RaytracingProgram#-transparency">🌫 Transparency</a></li>
+        <li><a href="#-cones--spotlights">💡 Cones & Spotlights</a></li>
+        <li><a href="#-reflections">🔃 Reflections</a></li>
+        <li><a href="#-shadows">🌇 Shadows</a></li>
+        <li><a href="#-viewports">📷 Viewports</a></li>
+        <li><a href="#-textures">🎨 Textures</a></li>
+        <li><a href="#-transparency">🌫 Transparency</a></li>
 			</ul>
       <a href="https://github.com/ethangutknecht/RaytracingProgram#-the-final-beautiful-renders">🏁 The Final Beautiful Renders</a><br><br>
 		</td>
@@ -109,7 +109,7 @@ Rendering Sections | Camera Positions
 
 <br><br>
 ### 🎨 Textures
-Textures are pretty simple. Put an image on an object. It becomes pretty easy for objects like a plane or a single side of a cube. The challenge comes when you map the object onto a 3D surface. The example used in my screenshots is mapping an American flag onto a cylinder's side. This wraps the flag around the cylinder, similar to how you would do with a can of soup. Next, there had to be some computations involving mapping the size of the image in pixels to [0, 1]. Once that mapping computation is complete, it’s pretty simple to find what color that pixel needs based on the image map, lighting, etc.
+Textures are pretty simple. Put an image on an object. It becomes pretty easy for objects like a plane or a single side of a cube. The challenge comes when you map the object onto a 3D surface. I used mapping an American flag onto a cylinder's side as an example. This wraps the flag around the cylinder, similar to how you would do with a can of soup. Next, there had to be some computations involving mapping the size of the image in pixels to [0, 1]. Once that mapping computation is complete, it’s pretty simple to find what color that pixel needs based on the image map, lighting, etc.
 
 <br><br>
 ### 🌫 Transparency
@@ -151,7 +151,7 @@ We would combine the colors with whatever it hit and the transparent object's co
 
 - - - -
 <h6 align="center">
-	<a align="center" href="https://github.com/ethangutknecht/RaytracingProgram#-raytracing-program">⬆ Back To The Top </a>
+	<a align="center" href="#-raytracing-program">⬆ Back To The Top </a>
 </h6>
 
 - - - -
