@@ -39,18 +39,18 @@
 
 ## 🎓 About The Class
 #### CSE386 - The Foundation Of Computer Graphics 
-I took this class in my junior year of college, and it brought a heavy focus on vectors and vector arithmetic. Mastering the skills of normalizing, morphing, and creating vectors was a dependency to do all of the fun stuff later down the road. We first learned about raytracing; this process takes every pixel and computes a color based on the “shapes” within the scene.  When comparing this algorithm to an “object-ordered” algorithm, it is much slower in computation time, but it gave me a great understanding of how 3D scenes are rendered on computers. Late in the class, we learned about “object-ordered rendering,” an algorithm that computes the color of shapes by object rather than by pixel. The course was a marathon rather than a sprint, as each topic was built on the other. Overall, it was an impeccable class, and I would recommend anyone to learn this stuff if they have the opportunity.
+I took this class in my junior year of college, and it brought a heavy focus on vectors and vector arithmetic. Mastering the skills of normalizing, morphing, and creating vectors was a dependency to do all of the fun stuff later down the road. We first learned about raytracing; this process takes every pixel and computes a color based on the “shapes” within the scene.  Compared to an “object-ordered” algorithm, it is much slower in computation time, but it gave me a great understanding of how 3D scenes are rendered on computers. Late in the class, we learned about “object-ordered rendering,” an algorithm that computes the color of shapes by object rather than by pixel. The course was a marathon rather than a sprint, as the syllabus built each topic on the other. Overall, it was an impeccable class, and I would recommend anyone to learn this stuff if they have the opportunity.
 
 
 <br><br><br>
 ## ℹ About The Program
-This program revolves around the concept of raytracing. Raytracing is a term for a *fancy* algorithm that renders 3D images in computer graphics. The algorithm takes a viewing ray for every pixel within the window, “shoots” them into the scene, and calculates a color for the corresponding pixel. For example, if a window has a size of 200px by 100px, there will be 20,000 pixels, thus 20,000 viewing rays. After all the viewing rays have been calculated for the window, the algorithm will show the frame. The calculation process for a single pixel can be as complex as you want it to be! For example, if I wanted my image to be super detailed, I could add shadows, reflections, anti-aliasing, transparent objects, etc. On the flip side, you can also make it very simple, only showing the ambient/silhouette of the things within the scene. The possibilities are truly endless. The process describes the flawless *elegancy* of programming.
+This program revolves around the concept of raytracing. Raytracing is a term for a *fancy* algorithm that renders 3D images in computer graphics. The algorithm takes a viewing ray for every pixel within the window, “shoots” them into the scene, and calculates a color for the corresponding pixel. For example, if a window is 200px by 100px, there will be 20,000 pixels, thus 20,000 viewing rays. After the algorithm calculates the viewing rays, the algorithm will show the frame. The calculation process for a single pixel can be as complex as you want it to be! For example, if I wanted my image to be super detailed, I could add shadows, reflections, anti-aliasing, transparent objects, etc. On the flip side, you can also make it very simple, only showing the ambient/silhouette of the things within the scene. The possibilities are truly endless. The process describes the flawless *elegancy* of programming.
 
 
 <br><br><br>
 ## 🧮 The *Fancy* Calculation Features
 ### ⭕ Anti-aliasing
-This is an elegant feature that you probably experience every day but are unaware it’s happening! This feature takes a nice ridged edge and will make it round with one simple calculation. There are many different intensities that you can choose to do, but for the sake of our program, we decided to use a three-by-three grid. This will take a pixel and get the sum of every pixel’s colors (RGB) by shooting extra viewing rays to the surrounding pixels. Afterward, it will take the current pixel and reassign it with the average color, creating those buttery smooth images. <br><br>
+This is an elegant feature you probably experience every day but are unaware it’s happening! This feature takes a nice ridged edge and will make it round with one simple calculation. You can choose to do many different intensities, but for the sake of our program, we decided to use a three-by-three grid. This will take a pixel and get the sum of every pixel’s colors (RGB) by shooting extra viewing rays to the surrounding pixels. Afterward, it will take the current pixel and reassign it with the average color, creating those buttery smooth images. <br><br>
 Example of a 3x3 grid:
 | ↘ | ⬇ | ↙ 
 | :---: | :---: | :---:
@@ -64,7 +64,7 @@ Example of a 3x3 grid:
 
 <br><br>
 ### 💡 Cones & Spotlights
-These two features go hand in hand. A cone is a minor feature that uses the quadratic surface equation of a parabolic cylinder to create the shape’s properties. A little extra work is needed to let the program know not to keep producing the shape above the tip of the cone. A spotlight is simply a cone, but it is light instead of a physical form. Anything within the "light cone" will be illuminated, but anything outside will show the object ambient. An index position, height, and radius of the base will be specified when creating the cone.
+These two features go hand in hand. A cone is a minor feature that uses the quadratic surface equation of a parabolic cylinder to create the shape’s properties. A little extra work is needed to let the program know not to keep producing the shape above the tip of the cone. A spotlight is a cone, but it is light instead of a physical form. Anything within the "light cone" will be illuminated, but anything outside will show the object ambient. The base's index position, height, and radius will be specified when creating the cone.
 
 
 <br><br>
@@ -109,16 +109,16 @@ Rendering Sections | Camera Positions
 
 <br><br>
 ### 🎨 Textures
-Textures are pretty simple. Put an image on an object. It becomes pretty easy for objects like a plane or a single side of a cube. The challenge comes when you map the object onto a 3D surface. I used mapping an American flag onto a cylinder's side as an example. This wraps the flag around the cylinder, similar to how you would do with a can of soup. Next, there had to be some computations involving mapping the size of the image in pixels to [0, 1]. Once that mapping computation is complete, it’s pretty simple to find what color that pixel needs based on the image map, lighting, etc.
+Textures are pretty simple. Put an image on an object. It becomes pretty easy for objects like a plane or a single side of a cube. The challenge comes when you map the object onto a 3D surface. I used mapping an American flag onto a cylinder's side as an example. This wraps the flag around the cylinder, similar to how you would with a can of soup. Next, there had to be some computations involving mapping the size of the image in pixels to [0, 1]. Once that mapping computation is complete, it’s pretty simple to find what color that pixel needs based on the image map, lighting, etc.
 
 <br><br>
 ### 🌫 Transparency
-Transparency is one feature that takes the program from good to great. In this program, we have a set of opaque objects and a set of transparent objects. When a viewing ray hits a transparent object, it will continue to shoot past, looking for more objects. There are different cases:
+Transparency is one feature that takes the program from good to great. This program has a set of opaque objects and a set of transparent objects. When a viewing ray hits a transparent object, it will continue to shoot past, looking for more objects. There are different cases:
 - Hits another opaque object
 - Hits the "sky" or no object
 - Hits another transparent object
 
-We would combine the colors with whatever it hit and the transparent object's color based on these cases. Overall, the entities behind a transparent object would look like a tint varying by how transparent the object is. In the example below, the red plane intersects the scene making everything "behind" the red plane have a red tint.
+Based on these cases, we would combine the colors with whatever it hit and the transparent object's color. Overall, the entities behind a transparent object would look like a tint varying by how transparent the object is. In the example below, the red plane intersects the scene making everything "behind" the red plane have a red tint.
 
 <br>**Example Of Transparency:**<br>
 ![Example_Of_Viewports](https://github.com/ethangutknecht/RaytracingProgram/blob/main/Images/Transparency_Example1.png?raw=true)
@@ -151,7 +151,7 @@ We would combine the colors with whatever it hit and the transparent object's co
 
 - - - -
 <h6 align="center">
-	<a align="center" href="#-raytracing-program">⬆ Back To The Top </a>
+	<a align="center" href="#-back-to-ethan-gutknechts-profile">⬆ Back To The Top </a>
 </h6>
 
 - - - -
@@ -165,8 +165,4 @@ We would combine the colors with whatever it hit and the transparent object's co
 <h6 align="center">
   Copyright © Ethan Gutknecht 2022
 </h6>
-
-
-
-
 
