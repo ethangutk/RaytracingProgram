@@ -1,5 +1,5 @@
 <h6 >
-	<a href="https://github.com/ethangutknecht">↩ Back To Ethan Gutknecht's Profile</a>
+	<a href="https://github.com/ethangtkt">↩ Back To My Profile</a>
 </h6>
 
 <h1 align="center">🎯 Raytracing Program</h1><br>
@@ -23,7 +23,7 @@
         <li><a href="#-textures">🎨 Textures</a></li>
         <li><a href="#-transparency">🌫 Transparency</a></li>
 			</ul>
-      <a href="https://github.com/ethangutknecht/RaytracingProgram#-the-final-beautiful-renders">🏁 The Final Beautiful Renders</a><br><br>
+      <a href="https://github.com/ethangtkt/RaytracingProgram#-the-final-beautiful-renders">🏁 The Final Beautiful Renders</a><br><br>
 		</td>
   	</tr>
 </table><br>
@@ -59,7 +59,7 @@ Example of a 3x3 grid:
 
 | Before | After
 | :---: | :---:
-| ![Before_Visual](https://github.com/ethangutknecht/RaytracingProgram/blob/main/Images/AA_Before.png?raw=true) |  ![After_Visual](https://github.com/ethangutknecht/RaytracingProgram/blob/main/Images/AA_After.png?raw=true)
+| ![Before_Visual](https://github.com/ethangtkt/RaytracingProgram/blob/main/Images/AA_Before.png?raw=true) |  ![After_Visual](https://github.com/ethangtkt/RaytracingProgram/blob/main/Images/AA_After.png?raw=true)
 
 
 <br><br>
@@ -77,14 +77,14 @@ This is my favorite feature of this program. This feature ultimately allowed us 
 
 | Allowing 0 Recursions | Allowing 1 Recursion | Allowing 2 Recursions 
 | :---: | :---: | :---:
-| ![Image_1](https://github.com/ethangutknecht/RaytracingProgram/blob/main/Images/ReflectionsDemo_1.png?raw=true) | ![Image 2](https://github.com/ethangutknecht/RaytracingProgram/blob/main/Images/ReflectionsDemo_2.png?raw=true) | ![Image_3](https://github.com/ethangutknecht/RaytracingProgram/blob/main/Images/ReflectionsDemo_3.png?raw=true)
+| ![Image_1](https://github.com/ethangtkt/RaytracingProgram/blob/main/Images/ReflectionsDemo_1.png?raw=true) | ![Image 2](https://github.com/ethangtkt/RaytracingProgram/blob/main/Images/ReflectionsDemo_2.png?raw=true) | ![Image_3](https://github.com/ethangtkt/RaytracingProgram/blob/main/Images/ReflectionsDemo_3.png?raw=true)
 
 My program allows it to specify how many recursions to do. I always set it to three since doing more seems to diminish returns. Finally, I also had to consider surface acne when coding this. So every hit is slightly moved above the surface by a tiny factor of 0.01 units.<br><br>
 **Example Of Surface Acne:**<br>
-![Example_Of_Surface_Acne](https://github.com/ethangutknecht/RaytracingProgram/blob/main/Images/SurfaceAcne.png?raw=true)
+![Example_Of_Surface_Acne](https://github.com/ethangtkt/RaytracingProgram/blob/main/Images/SurfaceAcne.png?raw=true)
 <br><br>
 **Example Of Reflections:**<br>
-![Example_Of_Reflections](https://github.com/ethangutknecht/RaytracingProgram/blob/main/Images/ReflectionsExample.png?raw=true)
+![Example_Of_Reflections](https://github.com/ethangtkt/RaytracingProgram/blob/main/Images/ReflectionsExample.png?raw=true)
 
 
 <br><br>
@@ -92,7 +92,7 @@ My program allows it to specify how many recursions to do. I always set it to th
 The shadows make the lights and objects in the scene feel real. When a ray hits an object, it will shoot rays at every light object. If those rays intersect with another opaque object and the light intensity is large enough, it will produce a shadow for the other opaque object. This also calculates multiple lights in the scene so that the shadow is accurate. These rays that shoot out to the light object are called shadow feelers. Surface acne will also be considered, thus moving the hit 0.01 units above each surface. <br>
 | Before | After
 | :---: | :---:
-| ![Before_Visual](https://github.com/ethangutknecht/RaytracingProgram/blob/main/Images/Shadows_Before.png?raw=true) |  ![After_Visual](https://github.com/ethangutknecht/RaytracingProgram/blob/main/Images/Shadows_After.png?raw=true)
+| ![Before_Visual](https://github.com/ethangtkt/RaytracingProgram/blob/main/Images/Shadows_Before.png?raw=true) |  ![After_Visual](https://github.com/ethangtkt/RaytracingProgram/blob/main/Images/Shadows_After.png?raw=true)
 
 
 <br><br>
@@ -101,10 +101,10 @@ This feature allows you to look at multiple different camera angles simultaneous
 
 Rendering Sections | Camera Positions
 | :---: | :---:
-| ![Sections](https://github.com/ethangutknecht/RaytracingProgram/blob/main/Images/ViewPorts_Example2.png?raw=true) |  ![Cam_Positions](https://github.com/ethangutknecht/RaytracingProgram/blob/main/Images/Viewports_Example3.png?raw=true)
+| ![Sections](https://github.com/ethangtkt/RaytracingProgram/blob/main/Images/ViewPorts_Example2.png?raw=true) |  ![Cam_Positions](https://github.com/ethangtkt/RaytracingProgram/blob/main/Images/Viewports_Example3.png?raw=true)
 
 <br>**Example Of Viewports:**<br>
-![Example_Of_Viewports](https://github.com/ethangutknecht/RaytracingProgram/blob/main/Images/ViewPorts_Example1.png?raw=true)
+![Example_Of_Viewports](https://github.com/ethangtkt/RaytracingProgram/blob/main/Images/ViewPorts_Example1.png?raw=true)
 
 
 <br><br>
@@ -121,7 +121,7 @@ Transparency is one feature that takes the program from good to great. This prog
 Based on these cases, we would combine the colors with whatever it hit and the transparent object's color. Overall, the entities behind a transparent object would look like a tint varying by how transparent the object is. In the example below, the red plane intersects the scene making everything "behind" the red plane have a red tint.
 
 <br>**Example Of Transparency:**<br>
-![Example_Of_Viewports](https://github.com/ethangutknecht/RaytracingProgram/blob/main/Images/Transparency_Example1.png?raw=true)
+![Example_Of_Viewports](https://github.com/ethangtkt/RaytracingProgram/blob/main/Images/Transparency_Example1.png?raw=true)
 
 
 <br><br><br><br>
@@ -142,10 +142,10 @@ Based on these cases, we would combine the colors with whatever it hit and the t
 <br><br><br><br>
 
 ## 🏁 The Final *Beautiful* Renders
-![Image_1](https://github.com/ethangutknecht/RaytracingProgram/blob/main/Images/Image_1.png?raw=true)
-![Image_2](https://github.com/ethangutknecht/RaytracingProgram/blob/main/Images/Image_2.png?raw=true)
-![Image_3](https://github.com/ethangutknecht/RaytracingProgram/blob/main/Images/Image_3.png?raw=true)
-![Image_4](https://github.com/ethangutknecht/RaytracingProgram/blob/main/Images/Image_4.png?raw=true)
+![Image_1](https://github.com/ethangtkt/RaytracingProgram/blob/main/Images/Image_1.png?raw=true)
+![Image_2](https://github.com/ethangtkt/RaytracingProgram/blob/main/Images/Image_2.png?raw=true)
+![Image_3](https://github.com/ethangtkt/RaytracingProgram/blob/main/Images/Image_3.png?raw=true)
+![Image_4](https://github.com/ethangtkt/RaytracingProgram/blob/main/Images/Image_4.png?raw=true)
 
 <br><br><br>
 
@@ -157,12 +157,12 @@ Based on these cases, we would combine the colors with whatever it hit and the t
 - - - -
 
 <h6 align="center">
-	<a href="https://github.com/ethangutknecht">↩ Back To Ethan Gutknecht's Profile</a>
+	<a href="https://github.com/ethangtkt">↩ Back To My Profile</a>
 </h6>
 
 - - - -
 
 <h6 align="center">
-  Copyright © Ethan Gutknecht 2022
+  Copyright © ethangtkt 2022
 </h6>
 
