@@ -151,7 +151,7 @@ Based on these cases, we would combine the colors with whatever it hit and the t
 
 - - - -
 <h6 align="center">
-	<a align="center" href="#-back-to-ethan-gutknechts-profile">⬆ Back To The Top </a>
+	<a align="center" href="#-back-to-my-profile">⬆ Back To The Top </a>
 </h6>
 
 - - - -
